@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.codec.ServerCodecConfigurer;
 
 @SpringBootApplication
 public class BackendApplication {
@@ -20,6 +21,11 @@ public class BackendApplication {
 			System.out.println("Let's inspect the beans provided by Spring Boot:");
 
 		};
+	}
+
+	@Bean
+	public ServerCodecConfigurer serverCodecConfigurer() {
+		return ServerCodecConfigurer.create();
 	}
 
 }

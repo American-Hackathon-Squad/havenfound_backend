@@ -11,20 +11,18 @@ public class Reservation {
     @Id
     private Long id;
 
-    @OneToOne
-    private Seeker seeker;
+    //private Seeker seeker;
 
-    @OneToMany
-    private Shelter shelter;
+    //private Shelter shelter;
 
     //Date for reservation
 
     //Generated reservation code
 
-    public Reservation(Seeker seeker, Shelter shelter){
-        this.seeker = seeker;
-        this.shelter = shelter;
-    }
+    //public Reservation(Seeker seeker, Shelter shelter){
+      //  this.seeker = seeker;
+        //this.shelter = shelter;
+    //}
 
     private String generateReservationCode(){
         return "";
