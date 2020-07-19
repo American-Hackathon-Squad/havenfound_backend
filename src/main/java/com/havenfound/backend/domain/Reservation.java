@@ -24,6 +24,10 @@ public class Reservation {
         //this.shelter = shelter;
     //}
 
+    public Reservation(){}
+
+
+
     private String generateReservationCode(){
         return "";
     }
