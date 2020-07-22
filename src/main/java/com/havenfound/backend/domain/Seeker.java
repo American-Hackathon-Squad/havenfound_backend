@@ -9,6 +9,7 @@ import javax.persistence.Id;
 public class Seeker {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     public Seeker(){

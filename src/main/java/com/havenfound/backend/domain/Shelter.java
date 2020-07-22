@@ -1,6 +1,7 @@
 package com.havenfound.backend.domain;
 
 import javax.persistence.*;
+import java.io.File;
 
 @Entity
 @Table(name = "SHELTER", schema = "public")
@@ -14,9 +15,9 @@ public class Shelter {
 
     protected int capacity = 0;
 
-    protected int maxCapacity = 0;
-
     private String description;
+
+    private File shelterImage = new File("/../../../../../resources/Generic Shelter Image.png");
 
     protected Shelter(){}
 
@@ -26,7 +27,6 @@ public class Shelter {
 
     public Shelter(String shelterName, int maxCapacity){
         this.shelterName = shelterName;
-        this.maxCapacity = maxCapacity;
     }
 
     
@@ -43,9 +43,23 @@ public class Shelter {
                 id, shelterName);
     }
 
+    public Long getId(){
+        return this.id;
+    }
+
+    public String getShelterName(){
+        return this.shelterName;
+    }
+
+    public File getShelterImage(){
+        return this.shelterImage;
+    }
+
     public String getDescription(){
         return this.description;
     }
+
+
 }
 
 

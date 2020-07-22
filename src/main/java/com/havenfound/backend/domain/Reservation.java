@@ -1,28 +1,33 @@
 package com.havenfound.backend.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Reservation {
+
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    //private Seeker seeker;
+    private Long seekerID;
 
-    //private Shelter shelter;
+    private Long shelterID;
 
-    //Date for reservation
+    private Date checkinDate;
+
+    private String reservationCode;
+
 
     //Generated reservation code
 
-    //public Reservation(Seeker seeker, Shelter shelter){
-      //  this.seeker = seeker;
-        //this.shelter = shelter;
-    //}
+    public Reservation(Long seeker, Long shelter, Date date){
+        this.seekerID = seeker;
+        this.shelterID = shelter;
+        this.checkinDate = date;
+        this.reservationCode = generateReservationCode();
+    }
 
     public Reservation(){}
 

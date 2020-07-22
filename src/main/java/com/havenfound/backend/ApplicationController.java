@@ -34,7 +34,12 @@ public class ApplicationController {
             shelterRepository.save(s2);
             return shelterRepository.findAll().size();
         }
-        //public List<Shelter> findShelters(){
-            //return shelterRepository.findAll();
-        //}
+        @RequestMapping("/all_shelters")
+        public List<Shelter> findShelters(){
+            return shelterRepository.findAll();
+        }
+
+        @RequestMapping("/{shelterID}/make_reservation"){
+            
+        }
 }
