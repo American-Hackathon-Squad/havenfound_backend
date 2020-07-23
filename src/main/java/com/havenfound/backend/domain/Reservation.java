@@ -29,6 +29,13 @@ public class Reservation {
         this.reservationCode = generateReservationCode();
     }
 
+    public Reservation(Long shelter, Date date){
+        this.shelterID = shelter;
+        this.checkinDate = date;
+        this.reservationCode = generateReservationCode();
+    }
+
+
     public Reservation(){}
 
 

@@ -17,7 +17,10 @@ public class Shelter {
 
     private String description;
 
-    private File shelterImage = new File("/../../../../../resources/Generic Shelter Image.png");
+    //private File shelterImage = new File("/../../../../../resources/Generic Shelter Image.png");
+
+    //Next we should try image url
+    private String shelterImage = "/../../../../../resources/Generic Shelter Image.png";
 
     protected Shelter(){}
 
@@ -34,6 +37,7 @@ public class Shelter {
     public Shelter(String shelterName, String description){
         this.shelterName = shelterName;
         this.description = description;
+        this.capacity = 0;
     }
 
     @Override
@@ -51,8 +55,20 @@ public class Shelter {
         return this.shelterName;
     }
 
-    public File getShelterImage(){
+    public int getCapacity(){
+        return this.capacity;
+    }
+
+    public void setCapacity(int capacity){
+        this.capacity = capacity;
+    }
+
+    public String getShelterImage(){
         return this.shelterImage;
+    }
+
+    public void setShelterImage(String shelterImage){
+        this.shelterImage = shelterImage;
     }
 
     public String getDescription(){

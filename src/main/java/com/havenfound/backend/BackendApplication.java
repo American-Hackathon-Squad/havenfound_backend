@@ -25,6 +25,8 @@ public class BackendApplication {
 	@EventListener(ApplicationReadyEvent.class)
 	public void doSomethingAfterStartup() {
 		Shelter catholicActionCenter = new Shelter("Catholic Action Center", "Example description");
+		catholicActionCenter.setShelterImage("/../../../../../resources/Generic Shelter Image.png");
+		catholicActionCenter.setCapacity(27);
 		shelterRepository.save(catholicActionCenter);
 	}
 
